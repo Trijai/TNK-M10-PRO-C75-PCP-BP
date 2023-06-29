@@ -76,4 +76,15 @@ print("Count of all images", len(images))
 # Plot the training and validation accuracy and loss at each epoch
 
 
+acc = history.history['accuracy']
+acc = history.history['accuracy']
+val_acc = history.history['val_accuracy']
+val_acc = history.history['val_accuracy']
 
+plt.plot(epochs, acc, 'y', label='Training acc')
+plt.plot(epochs, val_acc, 'r', label='Validation acc')
+plt.title('Training and validation accuracy')
+plt.xlabel('Epochs')
+plt.ylabel('Accuracy')
+plt.legend()
+plt.show()
